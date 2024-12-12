@@ -14,6 +14,31 @@ public class Average {
      * @return the average of all the values of nums.
      */
     public double getAvg(int[] nums){
-        return 0;
+        // declare variable 'avg' to later find average from array 'nums'
+        double avg = 0.0;
+        // create an array of 'double' data type w/ length set to 'nums' array length
+        double[] numsDouble = new double[nums.length];
+
+        // iterate through each 'int' element in 'nums' array --- converting from 'int' to 'double'
+        int itr = 0;
+        while(itr < nums.length){
+            // type-cast element from 'int' -> 'double' data type
+            double temp = (double)nums[itr];
+            // append newly converted double 'temp' to 'numsDouble' double array
+            numsDouble[itr] = temp;
+            // increment by 1 to keep loop going
+            ++ itr;
+        }
+
+        // use for-each loop to find the sum of all the 'nums' combine
+        for(double elem : numsDouble){
+            // add each element up
+            avg += elem;
+        }
+
+        // recursively find the quotient of 'nums'
+        avg = avg / numsDouble.length;
+
+        return avg;
     }
 }
