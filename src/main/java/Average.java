@@ -39,6 +39,7 @@ public class Average {
         // recursively find the quotient of 'nums'
         avg = avg / numsDouble.length;
 
+        // return statement of double type
         return avg;
     }
 }
